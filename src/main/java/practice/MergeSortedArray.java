@@ -6,28 +6,39 @@ import java.util.logging.Logger;
 public class MergeSortedArray {
     Logger logger = Logger.getLogger(getClass().getName());
 
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
+    public void merge(int[] nums1, int m, int[] nums2, int n)
+    {
         int finalSize = m + n - 1;
         int[] finalResult = new int[m + n];
-        if (m == 0) {
+        if (m == 0)
+        {
             finalResult = nums2;
-        } else if (n == 0) {
+        } else if (n == 0)
+        {
             finalResult = nums1;
-        } else {
+        } else
+        {
             int i = m - 1;
             int j = n - 1;
-            while (finalSize >= 0) {
-                if(i >= 0 && j >= 0){
-                    if (nums1[i] > nums2[j]) {
+            while (finalSize >= 0)
+            {
+                if (i >= 0 && j >= 0)
+                {
+                    if (nums1[i] > nums2[j])
+                    {
                         finalResult[finalSize--] = nums1[i--];
-                    } else {
+                    } else
+                    {
                         finalResult[finalSize--] = nums2[j--];
                     }
-                }else if(i >= 0){
-                        finalResult[finalSize--] = nums1[i--];
-                } else if (j >= 0) {
-                        finalResult[finalSize--] = nums2[j--];
-                }else {
+                } else if (i >= 0)
+                {
+                    finalResult[finalSize--] = nums1[i--];
+                } else if (j >= 0)
+                {
+                    finalResult[finalSize--] = nums2[j--];
+                } else
+                {
                     break;
                 }
             }
@@ -38,7 +49,8 @@ public class MergeSortedArray {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         MergeSortedArray mergeSortedArray = new MergeSortedArray();
         //Example 1:
         int[] first = {1, 2, 3, 0, 0, 0};
