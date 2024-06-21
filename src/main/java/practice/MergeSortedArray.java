@@ -1,7 +1,7 @@
 package practice;
 
 import java.util.Arrays;
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 public class MergeSortedArray {
     Logger logger = Logger.getLogger(getClass().getName());
@@ -43,10 +43,12 @@ public class MergeSortedArray {
                 }
             }
         }
-        nums2 = finalResult;
-        logger.info(Arrays.toString(finalResult));
-        logger.info(Arrays.toString(nums2));
 
+        nums2 = finalResult;
+
+        String finalResultString = Arrays.toString(finalResult);
+        String finalNums2 = Arrays.toString(nums2);
+        logger.log(Level.INFO, "finalResult: {0}, nums2: {1}", new Object[] {finalResultString, finalNums2});
     }
 
     public static void main(String[] args)

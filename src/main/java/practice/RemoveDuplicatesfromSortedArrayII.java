@@ -1,7 +1,7 @@
 package practice;
 
 import java.util.Arrays;
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 public class RemoveDuplicatesfromSortedArrayII {
     Logger logger = Logger.getLogger(getClass().getName());
@@ -33,8 +33,7 @@ public class RemoveDuplicatesfromSortedArrayII {
                 k++;
             }
         }
-        logger.info(k + "   " + Arrays.toString(nums));
-
+        logger.log(Level.INFO, "k is: {0} & array elements are: {1}", new Object[] {k, Arrays.toString(nums)});
         return k;
     }
 
